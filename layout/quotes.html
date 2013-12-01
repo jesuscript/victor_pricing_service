@@ -1,0 +1,51 @@
+<template name="quotes">
+  <div class="shroud"></div>
+  <div class="modal">
+    <span class="close glyphicon glyphicon-remove" ng-click="close()"></span>
+    <h2>Quotes</h2>
+    <table class="table table-bordered table-striped table-hover">
+      <tr>
+        <th>
+          Aircraft type
+        </th>
+        <th>
+          Departure airport
+        </th>
+        <th>
+          Destination airport
+        </th>
+        <th>
+          Duration
+        </th>
+        <th>
+          Price
+        </th>
+        <th>
+          ID
+        </th>
+      </tr>
+      {{#each quotes}}
+      <tr>
+        <td>
+          {{aircraftType}}
+        </td>
+        <td>
+          {{deptAirport}}
+        </td>
+        <td>
+          {{destAirport}}
+        </td>
+        <td>
+          {{duration}}
+        </td>
+        <td>
+          {{nettPrice}}
+        </td>
+        <td>
+          {{id}}
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+</template>

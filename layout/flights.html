@@ -1,0 +1,44 @@
+<template name="flights">
+  <div class="col-xs-9">
+    <table class="table table-striped table-bordered table-hover flights-table">
+      <tr>
+        <th>
+          Type
+        </th>
+        <th>
+          Average price
+        </th>
+        <th>
+          Count
+        </th>
+        <th>
+          Quotes
+        </th>
+      </tr>
+      
+      {{#each flights }}
+        <tr>
+          <td>
+            {{_id}}
+          </td>
+          <td>
+            {{avgPrice}}
+          </td>
+          <td>
+            {{count}}
+          </td>
+          <td class="cell-btn">
+
+            <button class="btn btn-default btn-sm quotes-btn" type="button" data-id="_id">
+              <span class="glyphicon glyphicon-info-sign"></span>
+            </button>
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+
+  {{#if showQuotes}}
+    {{>quotes}}
+  {{/if}}
+</template>
