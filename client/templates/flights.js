@@ -1,10 +1,7 @@
 Template.flights.helpers({
   flights: function(){
     if(Session.get("search-duration")){
-      return flights = [ //mock data for demo
-        {_id: "123", avgPrice: "123", count: 123},
-        {_id: "456", avgPrice: "456", count: 456}
-      ];
+      return flights = Collections.flights.find().fetch();
     }else{
       return [];
     }
